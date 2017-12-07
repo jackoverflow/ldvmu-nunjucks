@@ -1,0 +1,16 @@
+{
+  "name": "grant-nov29-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nunjucks-render": "^2.2.1"
+  },
+  "dependencies": {},
+  "description": ""
+}

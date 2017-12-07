@@ -1,0 +1,133 @@
+{% macro active(activePage='home') %}
+<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 55, 'stickySetTop': '-55px', 'stickyChangeLogo': true}">
+    <div class="header-body">
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                        <div class="header-row">
+                            <div class="header-logo">
+
+                                <h1 class="logo">                                        
+                                <a href="index.html">
+                                    <img src="img/dvmlogo.jpg" alt="" class="image-logo">
+                                </a>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                <div class="header-column justify-content-end">
+                    <div class="header-row pt-3">
+                        <div class="header-nav-top">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item d-none d-sm-block">
+                                    <a class="nav-link" href="about-us.html"><i class="fa fa-angle-right"></i> About Us</a>
+                                </li>
+                                <li class="nav-item d-none d-sm-block">
+                                    <a class="nav-link" href="contact-us.html"><i class="fa fa-angle-right"></i> Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <span class="ws-nowrap"><i class="fa fa-phone"></i> (123) 456-789</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-search d-none d-md-block">
+                            <form id="searchForm" action="page-search-results.html" method="get">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header-row">
+                        <div class="header-nav">
+                            <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                                <nav class="collapse">
+                                    <h2 class="visuallyhidden">Main Navigation</h2>
+                                    <ul class="nav nav-pills" id="mainNav">
+                                            <li class="">
+																								<a class="nav-link {%if activePage == 'home' %} active {% endif %}" href="index.html">
+                                                    Home
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a class="nav-link {%if activePage == 'blog' %} active {% endif %}" href="blog.html">
+                                                    Blog
+                                                </a>
+                                            </li>
+																						<li class="">
+                                                <a class="nav-link {%if activePage == 'about-us' %} active {% endif %}" href="blog.html">
+                                                    About Us
+                                                </a>
+                                            </li>                                            
+
+																						<li class="dropdown">
+																							<a class="nav-link dropdown-item dropdown-toggle{%if activePage == 'teachings' %} active {% endif %}" href="#">
+																									Teachings
+																							<i class="fa fa-caret-down"></i></a>
+																					
+																							<ul class="dropdown-menu">
+																								<li class="">
+																									<a class="nav-link dropdown-item" href="#">Our Unique Teachings</i></a>
+																								</li>
+																								<li class="">
+																									<a class="nav-link dropdown-item" href="#">Our Mini Teachings</i></a>
+																								</li>
+																							</ul>
+																						</li>	
+
+                                            	<li class="">
+                                                <a class="nav-link {%if activePage == 'gallery' %} active {% endif %}" href="#">
+                                                    Gallery
+                                                </a>                                                
+                                            	</li>
+                                            	<li class="">
+                                                <a class="nav-link {%if activePage == 'kids-corner' %} active {% endif %}" href="#">
+                                                    Kids Corner
+                                                </a>                                                
+                                            	</li>
+																							<li class="">
+                                                <a class="nav-link {%if activePage == 'hep-support' %} active {% endif %}" href="#">
+                                                    Help and Support
+                                                </a>                                                
+                                            	</li>
+																							<li class="dropdown">
+																							<a class="nav-link dropdown-item dropdown-toggle{%if activePage == 'teachings' %} active {% endif %}" href="#">
+																									Why?
+																							<i class="fa fa-caret-down"></i></a>
+																					
+																							<ul class="dropdown-menu">
+																								<li class="">
+																									<a class="nav-link dropdown-item" href="#">Why Register?</i></a>
+																								</li>
+																								<li class="">
+																									<a class="nav-link dropdown-item" href="#">Why Become a Student?</i></a>
+																								</li>
+																							</ul>
+																						</li>																							
+																							{# <li class="">
+                                                <a class="nav-link {%if activePage == 'newsletter' %} active {% endif %}" href="#">
+                                                    Newsletter
+                                                </a>                                                
+                                            	</li> #}
+                                            	<li class="">
+                                                <a class="nav-link {%if activePage == 'contact' %} active {% endif %}" href="contact-us.html">
+                                                    Contact Us
+                                                </a>
+                                            	</li>
+                                        		</ul>
+                                </nav>
+                            </div>
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endmacro %}
