@@ -9,6 +9,12 @@
 .header-body {
     position: relative;
 }
+h1.logo.small img {
+    height: 40%;
+    width: 40%;  
+    margin-left: 20px;  
+    margin-top: 45px;
+}
 h1.logo {
     font-family: 'Merienda', cursive;
     font-size: 25px;
@@ -52,7 +58,7 @@ h1.logo a:hover {
     width: 100%;
 }
 .image-logo {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 100px;
     width: 100px;
 }
